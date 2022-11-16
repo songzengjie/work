@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 原型和原型链
+        // function Fn() {
+
+        // }
+        // Fn.prototype.say = 'Ha'
+        // let person = new Fn()
+        // console.log(person.say);//Ha
+        // console.log(person.__proto__===Fn.prototype);//true
+
+        // 原型链
+        // let obj = {
+        //     name: '张三',
+        //     say: function () {
+        //         console.log('小三');
+        //     }
+        // }
+        // console.log(obj.say);
+
+
+        // 继承方法
+        // 1.原型继承
+        // function Super() {
+        //     this.a = '张三'
+        // }
+        // Super.prototype.say = function () {
+        //     console.log('哈哈');
+        // }
+        // const test = new Super
+        // console.log(test);
+
+        // 2.原型式继承
+        // function object(o) {
+        //     function F() {}
+        //     F.prototype=o
+        //     return new F()
+        // }
+        // let obj={
+        //     name:"张三",
+        //     arr:['张三']
+        // }
+        // let obj1=Object.create(obj)
+        // obj1.arr.push('小四')
+        // console.log(obj1);
+    </script>
+</body>
+
+</html>

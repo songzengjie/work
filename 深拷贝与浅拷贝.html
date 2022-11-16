@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+        // 浅拷贝
+        // let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // let say = obj
+        // let say = {...obj}
+        // say.age = 19
+        // say.obj1.sex = '女'
+        // console.log(obj);
+        // console.log(say);
+
+
+        // let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // let say = obj
+        // let say = {...obj}
+        // say.age = 19
+        // say.obj1.sex = '女'
+        // console.log(obj);
+
+
+        // console.log(say);
+        // let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // let say = obj
+        // let say = {...obj}
+        // say.age = 19
+        // say.obj1.sex = '女'
+        // console.log(obj);
+        // console.log(say);
+
+        // 深拷贝
+        //  let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // let a = JSON.parse(JSON.stringify(obj))
+        // a.age=19
+        // say.obj1.sex = '女'
+        // console.log(a);
+        // console.log(obj);
+
+        //  let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // function deepclone(obj){
+        //     var newObj;
+        //     if(Array.isArray(obj)){ 
+        //         newObj = []
+        //     }else{
+        //         newObj ={}
+        //     }
+        //     if(obj instanceof Object){//判断obj是不是对象
+        //         for(let key in obj){
+        //             if(obj[key] instanceof Object){ //判断对象中是否还有对象
+        //                 newObj[key] = deepclone(obj[key]) //如果有就在调用自身
+        //             }else{
+        //                 newObj[key] = obj[key]  //没有直接一一赋值
+        //             }
+        //         }
+        //     }
+        //     return  newObj
+        // }
+
+        // let a = deepclone(obj)
+        // a.obj1.sex = '女'
+        // console.log(a);
+        // console.log(obj);
+        //  let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // function deepclone(obj){
+        //     var newObj;
+        //     if(Array.isArray(obj)){ 
+        //         newObj = []
+        //     }else{
+        //         newObj ={}
+        //     }
+        //     if(obj instanceof Object){
+        //         for(let key in obj){
+        //             if(obj[key] instanceof Object){ 
+        //                 newObj[key] = deepclone(obj[key]) 
+        //             }else{
+        //                 newObj[key] = obj[key]  
+        //             }
+        //         }
+        //     }
+        //     return  newObj
+        // }
+
+        // let a = deepclone(obj)
+        // a.obj1.sex = '女'
+        // console.log(a);
+        // console.log(obj);
+
+
+
+        //  let obj = {
+        //     name:"张三",
+        //     age:18,
+        //     obj1:{
+        //         sex:"男",
+        //     }
+        // }
+        // function deepclone(obj){
+        //     var newObj;
+        //     if(Array.isArray(obj)){ 
+        //         newObj = []
+        //     }else{
+        //         newObj ={}
+        //     }
+        //     if(obj instanceof Object){
+        //         for(let key in obj){
+        //             if(obj[key] instanceof Object){ 
+        //                 newObj[key] = deepclone(obj[key]) 
+        //             }else{
+        //                 newObj[key] = obj[key] 
+        //             }
+        //         }
+        //     }
+        //     return  newObj
+        // }
+
+        // let a = deepclone(obj)
+        // a.obj1.sex = '女'
+        // console.log(a);
+        // console.log(obj);
+
+
+        
+    </script>
+    
+</body>
+</html>
