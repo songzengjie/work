@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 声明的变量没有变量提升
+        // let 不能重复声明
+        // let const 
+        // let a;
+
+        // function fn() {
+        //     a = 1
+        // }
+        // console.log(a); 
+
+        // let b=11
+        // let b=11
+        // const  不能重复声明
+        // const c = 111
+        // const c = 111
+        // c = 555
+        // let const 
+        // let a;
+
+        // function fn() {
+        //     a = 1
+        // }
+        // console.log(a); 
+
+        // let b=11
+        // let b=11
+        // const  
+        // const c = 111
+        // const c = 111
+        // c = 555
+        // let const 
+        // let a;
+
+        // function fn() {
+        //     a = 1
+        // }
+        // console.log(a); 
+
+        // let b=11
+        // let b=11
+        // const  
+        // const c = 111
+        // const c = 111
+        // c = 555
+
+
+        // 解构赋值
+        // let arr=[1,2,3,4]
+        // let [a,b,c,d]=arr//数组解构
+        // let obj={
+        //     name:'ha',
+        //     age:'18'
+        // }
+        // let {name}=obj//对象解构
+        // let arr=[1,2,3,4]
+        // let [a,b,c,d]=arr
+        // let obj={
+        //     name:'ha',
+        //     age:'18'
+        // }
+        // let {name}=obj
+        // let arr=[1,2,3,4]
+        // let [a,b,c,d]=arr
+        // let obj={
+        //     name:'ha',
+        //     age:'18'
+        // }
+        // let {name}=obj
+
+        // 模板字符串
+        // 1.拼接
+        //      let resl = '<ul>' +
+        //     '<li>11</li>' +
+        //     '<li>22</li>' +
+        //     '</ul>'
+        // let eat = `
+        //     <ul>
+        //    <li>33</li>     
+        //    <li>44</li>     
+        //    <li>55</li>     
+        //    <li>66</li>       
+        //    </ul>
+        // `
+
+        // document.write(resl)
+        // document.write(eat)
+
+        // 对象的简化写法
+        // let name='三'
+        // function fn(){
+        //     obj1={
+        //         name,//name:name
+        //     }
+        // }
+
+        // 箭头函数
+
+        // function fn() {
+        //     console.log(this);
+        // }
+        // // 普通函数换成箭头函数写法
+        // let fn = () => {
+        //     console.log(this);
+        // }
+
+        // let fn1=(a)=>{
+        //     num=a
+        // }
+        // fn1(1)
+        // let fn2=a=>num=a
+        // function fn() {
+        //     console.log(this);
+        // }
+  
+        // let fn = () => {
+        //     console.log(this);
+        // }
+
+        // let fn1=(a)=>{
+        //     num=a
+        // }
+        // fn1(1)
+        // let fn2=a=>num=a
+        // function fn() {
+        //     console.log(this);
+        // }
+  
+        // let fn = () => {
+        //     console.log(this);
+        // }
+
+        // let fn1=(a)=>{
+        //     num=a
+        // }
+        // fn1(1)
+        // let fn2=a=>num=a
+        //当箭头函数只有一个参数可以省略括号 当有返回值是可以省略大括号和return不写
+
+        // 函数参数的默认值
+        // function fn(a,b,c=1){
+        //   
+        //     console.log(a+b+c);
+        // }
+        // fn(3,4)
+        // function fn1(c=1,a,b){
+        //    
+        //     console.log(a+c+b);//NaN
+        // }
+        // fn1(3,4)
+
+        // reset参数
+
+        // function fn(...age){
+        //         console.log(age);
+        // }
+        // fn(1,2,3)
+
+        // 扩展运算符  // 应用场景一般用于对象数组合并  对象合并
+    
+        // let obj={
+        //     name:'张三',
+        //     age:"18"
+        // }
+        // let obj1={
+        //     name:'赵四',
+        //     age:"16"
+        // }
+        // let obj2={...obj,...obj1}
+        // // 第一个obj会覆盖第二个obj的属性
+        // console.log(obj2);
+        // 数组
+        // let arr=[1,2,3,4]
+        // let arr1=[1,2,3,4]
+        // let arr2=[...arr,...arr1]
+        // console.log(arr2);
+
+        // Promise
+        // let promise = new Promise((resolve, reject)=>{
+        //   let a = 5
+        //   if(a>6){
+        //     resolve('成功了')
+        //   }else{
+        //     reject('失败了')
+        //   }
+        // })
+        // promise.then(res=>{
+        //     console.log(res);
+        // })
+        // promise.catch(err=>{
+        //     console.log(err);
+        // })
+    </script>
+</body>
+
+</html>
