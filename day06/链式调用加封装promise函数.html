@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        const a = `000`
+        const b = `111`
+        const c = `222`
+
+        // const p = (q) => {
+        //     return new Promise((res, err) => {
+        //         res(q)
+        //     })
+        // }
+        // p(a).then(res => {
+        //     console.log(res);
+        //     return res
+        // }).then((data) => {
+        //     return p(b).then(res => {
+        //         console.log(res);
+        //         return data + res
+        //     })
+        // }).then((data1) => {
+
+        //     p(c).then(res => {
+        //         console.log(res);
+        //         console.log(data1 + res);
+        //     })
+        // })
+
+
+        // const p = (q) => {
+        //     return new Promise((res, err) => {
+        //         res(q)
+        //     })
+        // }
+        // p(a).then(res => {
+        //     console.log(res);
+        //     return res
+        // }).then((data) => {
+        //     return p(b).then(res => {
+        //         console.log(res);
+        //         return data + res
+        //     })
+        // }).then((data1) => {
+
+        //     p(c).then(res => {
+        //         console.log(res);
+        //         console.log(data1 + res);
+        //     })
+        // })
+
+
+        const p = (q) => {
+            return new Promise((res, err) => {
+                res(q)
+            })
+        }
+        p(a).then(res => {
+            console.log(res);
+            return res
+        }).then((data) => {
+            return p(b).then(res => {
+                console.log(res);
+                return data + res
+            })
+        }).then((data1) => {
+
+            p(c).then(res => {
+                console.log(res);
+                console.log(data1 + res);
+            })
+        })
+    </script>
+</body>
+
+</html>

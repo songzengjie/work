@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const a = `000`
+        const b = `111`
+        const c = `222`
+        const p = (q, time) => {
+            return new Promise((res, err) => {
+                setTimeout(() => {
+                    res(q)
+                }, time)
+
+            })
+        }
+        Promise.all([p(a, 1000), p(b, 2000), p(c, 4000)]).then(res => {
+            console.log(res);
+        })
+
+        // const p = (q, time) => {
+        //     return new Promise((res, err) => {
+        //         setTimeout(() => {
+        //             res(q)
+        //         }, time)
+
+        //     })
+        // }
+        // Promise.all([p(a, 1000), p(b, 2000), p(c, 4000)]).then(res => {
+        //     console.log(res);
+        // })
+        // const p = (q, time) => {
+        //     return new Promise((res, err) => {
+        //         setTimeout(() => {
+        //             res(q)
+        //         }, time)
+
+        //     })
+        // }
+        // Promise.all([p(a, 1000), p(b, 2000), p(c, 4000)]).then(res => {
+        //     console.log(res);
+        // })
+
+        // const a = `000`
+        // const b = `111`
+        // const c = `222`
+
+        // const p = (q, time) => {
+        //     return new Promise((res, err) => {
+        //         setTimeout(() => {
+        //             res(q)
+        //         }, time)
+
+        //     })
+        // }
+
+        // Promise.race([p(a,500),p(b,1000),p(c,2000)]).then(res=>{
+        //     console.log(res);
+        // })
+
+        // const p = (q, time) => {
+        //     return new Promise((res, err) => {
+        //         setTimeout(() => {
+        //             res(q)
+        //         }, time)
+
+        //     })
+        // }
+
+        // Promise.race([p(a,500),p(b,1000),p(c,2000)]).then(res=>{
+        //     console.log(res);
+        // })
+
+        // const p = (q, time) => {
+        //     return new Promise((res, err) => {
+        //         setTimeout(() => {
+        //             res(q)
+        //         }, time)
+
+        //     })
+        // }
+
+        // Promise.race([p(a,500),p(b,1000),p(c,2000)]).then(res=>{
+        //     console.log(res);
+        // })
+    </script>
+</body>
+
+</html>
