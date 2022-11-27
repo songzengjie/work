@@ -29,12 +29,12 @@
         <ol>
             <li class="empty-todos"><span class="msg">Congrat, you have no more tasks to do</span></li>
             <li class="flags">
-                <span>I item left</span>
+                <span><b class="num">1</b> item left</span>
                 <div class="flag">
-                    <span class="xz">All</span>
-                    <span>Active</span>
-                    <span>Completed</span>
-                    <span>Clear completed</span>
+                    <span class="All xz">All</span>
+                    <span class="Active">Active</span>
+                    <span class="Completed">Completed</span>
+                    <span class="Clear">Clear completed</span>
                 </div>
 
             </li>
@@ -48,6 +48,11 @@
     var empty = document.querySelector('.empty-todos');
     var flags = document.querySelector('.flags');
     var flag = document.querySelector('.flag');
+    var b = document.querySelector('.num');
+    var Active = document.querySelector('.Active');
+    var Completed = document.querySelector('.Completed');
+    var Clear = document.querySelector('.Clear');
+    var All = document.querySelector('.All');
 
     var arr = []
     add.onclick = function () {
@@ -55,6 +60,7 @@
             fn()
             empty.style.display = 'none'
             flags.style.display = 'flex'
+
         } else {
             alert('内容不能为空')
         }
@@ -83,20 +89,60 @@
                 <span class="del">×</span>
             `
         ul.appendChild(li)
+        num()
 
     }
+    // 未选中数量封装
+    function num() {
+        let num = 0
+        let num1 = 0
+        for (let index = 0; index < ul.children.length; index++) {
+            if (ul.children[index].className != 'active') {
+                ++num
+            } else {
+                ++num1
+            }
+        }
+        console.log(num);
+        b.innerText = num
+        if (num == ul.children.length) {
+            Active.style.display = 'none'
+            Completed.style.display = 'none'
+            Clear.style.display = 'none'
+        } else {
+            Active.style.display = ''
+            Completed.style.display = ''
+            Clear.style.display = ''
+        }
+        if (num1 == ul.children.length) {
+            Completed.style.display = 'none'
+            Active.style.display = 'none'
+        }
+        console.log(num1);
+        if (ul.children.length == 0) {
+            console.log(1);
+            flags.style.display = 'none'
+            empty.style.display = 'flex'
+        }
+
+
+    }
+
+
     // 删除
     // 事件委托
     ul.onclick = function (e) {
         if (e.target.className == 'del') { //判断你点击的是否是删除按钮-是就执行删除
             e.target.parentNode.remove()
             console.log(ul.children);
+            num()
             if (ul.children.length == 0) {
                 empty.style.display = 'block'
                 flags.style.display = 'none'
             }
         }
     }
+    // 切换状态
     ul.oninput = function (e) {
         console.log(e.target);
         if (e.target.parentNode.parentNode.className == 'active') {
@@ -109,7 +155,9 @@
             e.target = 'chan'
 
         }
+        num()
     }
+    // 分类按钮
     flag.onclick = function (e) {
         console.log(e.target.innerText);
         for (let i = 0; i < flag.children.length; i++) {
@@ -125,6 +173,44 @@
                 if (ul.children[index].className == 'active') {
                     console.log(index);
                     ul.children[index].remove()
+                    Active.style.display = 'none'
+                    Completed.style.display = 'none'
+                    Clear.style.display = 'none'
+                    All.className = 'xz'
+                    num()
+                } 
+            }
+        }
+        if (e.target.innerText == 'All') {
+
+            for (let index = 0; index < ul.children.length; index++) {
+                // console.log(index);
+
+                ul.children[index].style.display = ''
+
+            }
+        }
+
+        if (e.target.innerText == 'Active') {
+
+            for (let index = 0; index < ul.children.length; index++) {
+                // console.log(index);
+                if (ul.children[index].className == 'active') {
+                    console.log(index);
+                    ul.children[index].style.display = 'none'
+                }
+            }
+        }
+        if (e.target.innerText == 'Completed') {
+
+            for (let index = 0; index < ul.children.length; index++) {
+                // console.log(index);
+                if (ul.children[index].className != 'active') {
+                    console.log(index);
+                    ul.children[index].style.display = 'none'
+
+                } else {
+                    ul.children[index].style.display = ''
                 }
             }
         }
@@ -135,7 +221,8 @@
 
 
 <style>
-    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300); 
+    @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
+
     .xz {
         padding: 4px 6px;
         background: #fe7345;
@@ -318,6 +405,14 @@
         align-items: center;
         display: none;
         font-size: 14px;
+    }
+
+    .flag {
+        padding-left: 20px;
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 </style>
 
