@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- <div class="nomdl" :class="cvb">
+
+        </div>
+        <button @click="qh()">随机背景色</button> -->
+        <!-- <div class="nomdl" :class="['red', 'blue', 'black']">
+
+        </div> -->
+
+        <!-- <div class="nomdl" :class="{red:true,black:false}">
+
+        </div> -->
+
+        <!-- 
+        <div class="nomdl" style="background: red;">
+
+        </div><br> -->
+        <div class="nomdl" :style="{background: red}">
+            
+        </div>
+        <div class="nomdl" :style="a">
+
+        </div>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            red: 'red',
+            blue: 'blue',
+            black: 'black',
+            cvb: "",
+            a: {
+                backgroundColor: 'blue'
+            }
+        },
+        methods: {
+            // qh() {
+            //     let arr = ['red', 'blue', 'black']
+            //     console.log(Math.floor(Math.random() * 3));
+            //     this.cvb = arr[Math.floor(Math.random() * 3)]
+            // }
+            // qh() {
+            //     let arr = ['red', 'blue', 'black']
+            //     console.log(Math.floor(Math.random() * 3));
+            //     this.cvb = arr[Math.floor(Math.random() * 3)]
+            // }
+
+            // qh() {
+            //     let arr = ['red', 'blue', 'black']
+            //     console.log(Math.floor(Math.random() * 3));
+            //     this.cvb = arr[Math.floor(Math.random() * 3)]
+            // }
+
+
+        },
+    })
+</script>
+
+<style>
+    .nomdl {
+        width: 200px;
+        height: 200px;
+        border: 1px solid;
+    }
+
+    .red {
+        background: red;
+        border: 2px dashed blue;
+    }
+
+    .blue {
+        background: blue;
+        border: 4px solid red;
+    }
+
+    .black {
+        background: black;
+        border: 1px solid;
+        border-radius: 6px;
+    }
+</style>
+
+</html>

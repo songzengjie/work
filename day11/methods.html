@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>姓名：<input type="text" v-model="name"></p>
+        <p>年龄：<input type="text" v-model="age"></p>
+        <p>all：<input type="text" :value="all()" @input="hanchang"></p>
+
+    </div>
+</body>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            name: "张三",
+            age: 18
+        },
+        methods: {
+            // all(){
+            //   return  this.name+ ','+this.age
+            // },
+            // hanchang(e){
+            //     this.name = e.target.value.split(',')[0]
+            //     this.age = e.target.value.split(',')[1]
+            // },
+
+            // all(){
+            //   return  this.name+ ','+this.age
+            // },
+            // hanchang(e){
+            //     this.name = e.target.value.split(',')[0]
+            //     this.age = e.target.value.split(',')[1]
+            // },
+
+
+            // all(){
+            //   return  this.name+ ','+this.age
+            // },
+            // hanchang(e){
+            //     this.name = e.target.value.split(',')[0]
+            //     this.age = e.target.value.split(',')[1]
+            // }
+        },
+    })
+</script>
+
+</html>

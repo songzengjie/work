@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <p>姓名：<input type="text" v-model="name">{{name}}</p>
+        <p>a：<input type="text" v-model="obj.a"></p>
+        <p>b：<input type="text" v-model="obj.b"></p>
+        <p>c：<input type="text" v-model="obj.c.d"></p>
+        <p><input type="text" v-model="all"></p>
+
+    </div>
+
+</body>
+
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+            name: '张三',
+            age: 18,
+            all: '',
+            obj: {
+                a: 1,
+                b: 2,
+                c: {
+                    d: 3,
+                }
+            }
+        },
+        methods: {
+            
+        },
+        watch: {
+            // name:{
+            //     immediate:true,
+            //     handler(newval,oldval){
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+
+            // name:{
+            //     immediate:true,
+            //     handler(newval,oldval){
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+
+            // name:{
+            //     immediate:true,
+            //     handler(newval,oldval){
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+            // obj: {
+            //     deep: true,
+            //     handler(newval, oldval) {
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+            // obj: {
+            //     deep: true,
+            //     handler(newval, oldval) {
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+            // obj: {
+            //     deep: true,
+            //     handler(newval, oldval) {
+            //         console.log(newval);
+            //         console.log(oldval);
+            //     }
+            // }
+
+            // all: {
+            //     immediate: true,
+            //     handler(val1, val2) {
+            //         if (val1 == '') {
+            //             this.all = this.name + ',' + this.age
+            //         } else {
+            //             this.name = this.all.split(',')[0]
+            //             this.age = this.all.split(',')[1]
+            //         }
+            //     }
+            // }
+
+            // all: {
+            //     immediate: true,
+            //     handler(val1, val2) {
+            //         if (val1 == '') {
+            //             this.all = this.name + ',' + this.age
+            //         } else {
+            //             this.name = this.all.split(',')[0]
+            //             this.age = this.all.split(',')[1]
+            //         }
+            //     }
+            // }
+
+            // all: {
+            //     immediate: true,
+            //     handler(val1, val2) {
+            //         if (val1 == '') {
+            //             this.all = this.name + ',' + this.age
+            //         } else {
+            //             this.name = this.all.split(',')[0]
+            //             this.age = this.all.split(',')[1]
+            //         }
+            //     }
+            // }
+
+
+
+        },
+    })
+</script>
+
+</html>

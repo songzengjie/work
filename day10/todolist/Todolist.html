@@ -18,7 +18,7 @@
         <div class="center">
             <h1>~ Today I need to ~</h1>
             <div class="inp">
-                <input type="text" placeholder="Add new todo...">
+                <input class="title" type="text" placeholder="Add new todo...">
 
                 <span class="btn">
                     <span class="add">Submit</span>
@@ -31,9 +31,6 @@
             <br>
             <ol>
                 <li class="empty-todos">
-                    <!-- <path class="" fill="currentColor"
-                        d="M336 64h-80c0-35.3-28.7-64-64-64s-64 28.7-64 64H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48zM192 40c13.3 0 24 10.7 24 24s-10.7 24-24 24-24-10.7-24-24 10.7-24 24-24zm121.2 231.8l-143 141.8c-4.7 4.7-12.3 4.6-17-.1l-82.6-83.3c-4.7-4.7-4.6-12.3.1-17L99.1 285c4.7-4.7 12.3-4.6 17 .1l46 46.4 106-105.2c4.7-4.7 12.3-4.6 17 .1l28.2 28.4c4.7 4.8 4.6 12.3-.1 17z">
-                    </path> -->
                     <svg class="svg-inline--fa fa-clipboard-check fa-w-12 icon" aria-hidden="true" focusable="false"
                         data-prefix="fas" data-icon="clipboard-check" role="img" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 384 512" data-v-132cabf7="">
@@ -54,11 +51,79 @@
 </body>
 <script>
     var add = document.querySelector('.add')
-    add.onclick = function(e){
-        console.log(e.target);
-        
+    var inp = document.querySelector('.title')
+    var ul = document.querySelector('.ul')
+    var del
+    var change
+    var arr = []
+    add.onclick = function (e) {
+        console.log(inp.value);
+        arr.push({
+            name: inp.value,
+            check: false,
+            id: new Date().getTime()
+        })
+        fn()
+        inp.value = ''
+
     }
 
+    function fn() {
+        var li = document.createElement('li')
+        ul.innerHTML = ''
+        arr.forEach(item => {
+            if (item.check) {
+                li.innerHTML = `
+                    <span>
+                        <input type="checkbox" class="change" check="${item.check}" name="" id="${item.id}">
+                        ${item.name}
+                    </span>
+                    <span class="del" id="${item.id}">×</span>
+                `
+                li.className = 'active'
+
+            } else {
+                li.innerHTML = `
+                    <span>
+                        <input type="checkbox" class="change" check="${item.check}" name="" id="${item.id}">
+                        ${item.name}
+                    </span>
+                    <span class="del" id="${item.id}">×</span>`
+
+            }
+            ul.appendChild(li)
+        })
+
+    }
+
+    ul.oninput = function (e) {
+        fn()
+        console.log(1);
+
+    }
+
+    // for (var i = 0; i < del.length; i++) {
+    //     del[i].onclick = function () { //当前的事件源用 this来代替
+    //         console.log(this);
+
+
+    //     }
+    // }
+
+    // ul.onclick = function (e) {
+    //     console.log(e.target);
+    //     if (e.target.className == 'del') {
+    //         console.log(e.target.id);
+    //         let id = e.target.id
+    //         for (let i = 0; i < arr.length; i++) {
+    //             if (arr[i].id == id) {
+    //                 arr.splice(i, 1)
+    //             }
+    //         }
+    //         console.log(arr);
+    //         fn()
+    //     }
+    // }
 </script>
 <style>
     @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700,300);
@@ -134,7 +199,8 @@
         padding: 5px 0 3px;
         font-size: 18px;
         outline: none;
-        margin-right: 8px;
+        margin-right: 15px;
+        margin-left: 30px;
     }
 
     .btn {
@@ -142,6 +208,13 @@
         transform: rotate(4deg);
         border-radius: 6px;
         transition: transform .25s cubic-bezier(.175, .885, .32, 1.275);
+
+    }
+
+    @keyframes addbtn {
+        0% {
+            transform: rotate(6deg);
+        }
     }
 
     .btn span {
@@ -152,6 +225,12 @@
         border: 2px solid #494a4b;
         border-radius: inherit;
         background-color: #fff;
+    }
+
+    .btn:active {
+        animation: addbtn 0.1s;
+        height: 30px;
+        transform: rotate(0deg);
     }
 
     .btn:before {
@@ -169,6 +248,7 @@
         background-color: #fe7345;
         transition: transform .25s cubic-bezier(.175, .885, .32, 1.275);
     }
+
 
     .empty-todos {
         display: flex;
@@ -190,8 +270,40 @@
         color: rgba(73, 74, 75, .45);
     }
 
+    .ul {
+        margin-top: 20px;
+    }
 
-    
+    .ul li {
+        width: 100%;
+        line-height: 40px;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 10px 8px 0;
+        margin-bottom: 10px;
+    }
+
+    .active {
+        background: #fe7345;
+        border-radius: 6px;
+        color: #fff;
+
+    }
+
+    .ul li input {
+        width: 14px;
+        height: 14px;
+        margin-right: 8px;
+        margin-left: 15px;
+
+    }
+
+    .ul li span {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 </style>
 
 </html>
