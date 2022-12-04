@@ -117,6 +117,7 @@
 
     // 未选中数量封装
     function num() {
+        console.log(1);
         flag.innerHTML = ''
         let num = 0
         let num1 = 0
@@ -202,9 +203,11 @@
                 e.target.parentNode.parentNode.parentNode.className = ''
                 e.target.parentNode.parentNode.children[1].className = ''
                 e.target.parentNode.innerHTML = ` <input type="checkbox" class="up">`
+                num()
             }
-
         }
+
+
     }
 
     // 分类按钮
