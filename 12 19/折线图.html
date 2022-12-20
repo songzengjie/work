@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id="c" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+</body>
+<script>
+    var cva = document.getElementById('c')
+    var cxt = cva.getContext('2d')
+
+
+
+    // cxt.moveTo(50, 50)
+    // cxt.lineTo(150, 50)
+    // cxt.lineTo(150, 10)
+    // cxt.lineTo(50, 10)
+    // cxt.closePath()
+
+    // cxt.strokeStyle = 'pink'
+    // cxt.strokeRect(10,50,200,100)
+  
+    // cxt.stroke()
+
+
+    // cxt.fillStyle = 'pink'
+    // cxt.fillRect(50,50,200,100)
+
+    cxt.strokeStyle = 'blue'
+    cxt.strokeRect(50,50,200,100)
+    cxt.fillStyle = 'pink'
+    cxt.fillRect(50,50,200,100)
+
+
+ 
+</script>
+
+</html>

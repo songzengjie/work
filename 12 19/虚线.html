@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id="c" width="400" height="400" style="border: 1px solid #ccc;"></canvas>
+</body>
+<script>
+    var cva = document.getElementById('c')
+    var cxt = cva.getContext('2d')
+
+
+
+    cxt.moveTo(50, 200)
+    // cxt.lineTo(200, 200)
+    cxt.lineTo(200, 300)
+    cxt.lineWidth = 20 
+    cxt.strokeStyle = 'pink'
+    // cxt.lineJoin = 'bevel'
+    cxt.setLineDash([10,50,5])
+    cxt.stroke()
+</script>
+
+</html>
