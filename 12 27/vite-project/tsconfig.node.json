@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["node_modules/@types"] //某库的声明文件没找到  第一种手动指定编译器选项的 typeRoots 属性
+    // "skipLibCheck": true   第二种解决方法  开启编译器选项的 skipLibCheck 属性
+  },
+  "include": ["vite.config.ts"]
+}

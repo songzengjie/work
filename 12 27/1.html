@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var target = {
+            name: "xiaoming",
+            age: 18
+        }
+        const handler = {
+            set(target, prop, value) {
+                let result = Reflect.set(target, prop, value)
+                console.log("设置的操作" + result)
+                return true;
+            },
+            get(target, value) {
+                let result = Reflect.get(target, value)
+                console.log("获取的的操作" + result)
+            }
+        }
+
+        let proxy = new Proxy(target, handler);
+        proxy.coure = "java"
+        console.log(proxy)
+    </script>
+
+</body>
+
+</html>
